@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gokul Balachander / data analyst</title>
+<title>Resume / Gokul Balachander</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -708,6 +708,38 @@ footer{
   align-items:start;
 }
 
+
+.resume-toolbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-bottom:24px;
+}
+.resume-frame-wrap{
+  border:1px solid var(--line);
+  background:var(--ink);
+  border-radius:14px;
+  padding:12px;
+}
+.resume-frame{
+  width:100%;
+  height:1000px;
+  border:none;
+  border-radius:8px;
+  background:#fff;
+  display:block;
+}
+.resume-fallback{
+  text-align:center;
+  padding:60px 24px;
+  color:var(--ash);
+  font-size:14.5px;
+}
+@media (max-width: 720px){
+  .resume-frame{ height:560px; }
+}
 </style>
 </head>
 <body>
@@ -718,38 +750,36 @@ footer{
   <div class="logo">Gokul Balachander</div>
   <button class="nav-toggle" id="navToggle">menu</button>
   <nav id="mainNav">
-    <a href="index.html" class="active">home</a>
+    <a href="index.html">home</a>
     <a href="about.html">about</a>
     <a href="skills.html">skills</a>
     <a href="projects.html">projects</a>
-    <a href="resume.html">resume</a>
+    <a href="resume.html" class="active">resume</a>
     <a href="blog.html">blog</a>
     <a href="contact.html">contact</a>
   </nav>
 </header>
 
 <main>
-  <section class="hero">
-    <div class="status-badge"><span class="status-dot"></span> open to data analyst opportunities</div>
+  <div class="page-header">
+    <div class="eyebrow">$ open resume.pdf</div>
+    <h1 class="page-title">Resume</h1>
+    <p class="page-intro">View it right here, or grab the PDF to take with you.</p>
+  </div>
 
-    <div class="shard-wrap">
-      <div class="shard-glow"></div>
-      <div class="shard">
-        <div class="shard-spike"></div>
-        <div class="face face-top"></div>
-        <div class="face face-front"></div>
-        <div class="face face-right"></div>
-      </div>
+  <section class="reveal">
+    <div class="resume-toolbar">
+      <span style="font-family:var(--font-display); font-size:13px; color:var(--ash);">gokul_balachander_resume.pdf</span>
+      <a class="pill" href="resume.pdf" download>download pdf</a>
     </div>
 
-    <div class="hero-name">Gokul Balachander <span class="tagline">/ <span id="rotating-role"></span><span class="type-cursor">|</span></span></div>
-    <p class="hero-bio">Computer Science student at UC Riverside with hands-on experience across 4 independent data projects, using Python, SQL, and Power BI to turn raw data into decisions. I like building things — from forecasting pipelines to ML risk models — and I'm always tinkering with something new.</p>
-
-    <div class="pill-row">
-      <a class="pill" href="mailto:gokulbalachander.viiia@gmail.com">email</a>
-      <a class="pill" href="https://github.com/GokulBalachander" target="_blank" rel="noopener">github</a>
-      <a class="pill" href="https://linkedin.com/in/gokul-balachander" target="_blank" rel="noopener">linkedin</a>
-      <a class="pill" href="https://calendly.com/gokulbalachander-viiia/30min" target="_blank" rel="noopener">book a call</a>
+    <div class="resume-frame-wrap">
+      <iframe class="resume-frame" src="resume.pdf" title="Gokul Balachander resume">
+        <div class="resume-fallback">
+          Your browser can't preview PDFs inline.
+          <br><a class="pill" href="resume.pdf" download style="margin-top:14px; display:inline-block;">download pdf</a>
+        </div>
+      </iframe>
     </div>
   </section>
 </main>
